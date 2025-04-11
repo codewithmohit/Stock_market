@@ -3,11 +3,13 @@ from transformers import pipeline
 from datetime import datetime
 import time
 
+
+
 # --- Configuration ---
 NEWS_API_KEY = "835381e530674b2e868673f777b50e70"
 TELEGRAM_BOT_TOKEN = "7430660884:AAGuihBn67fVJzsw-VHafctmFAIbbqEXM_o"
 TELEGRAM_CHAT_ID = "972584544"
-MODEL = pipeline("sentiment-analysis", model="cardiffnlp/twitter-roberta-base-sentiment")
+MODEL = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
 
 # --- Functions ---
 def fetch_news():
